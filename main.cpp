@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include "ErrorHandling.cpp"
 using namespace std;
 
 set<string> keywords={
@@ -6,7 +7,7 @@ set<string> keywords={
 	"Primary","Key","Int","Varchar",
 	"Date","Decimal","Drop","Into"
 	,"Help","Values","From"
-	,"Where","And","Or","Insert"
+	,"Where","And","Or","Insert","Delete"
 };
 
 vector<string>Tokens;
@@ -107,5 +108,14 @@ int main()
 	 	ParseIntoTokens(Query);
 	 	cvtIntoSmallCase();
 	 	DisplayTokens();
+
+        bool checknoerrors=ErrorsChecking(Tokens);
+        // if(checknoerrors)
+        // {
+        //     Execute();
+        // }
 	 }
+
+     return 0;
 }
+
