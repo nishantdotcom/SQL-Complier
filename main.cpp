@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 #include "ErrorHandling.cpp"
+#include "HelpCommand.cpp"
 using namespace std;
 
 set<string> keywords={
